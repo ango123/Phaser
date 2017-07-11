@@ -20,8 +20,8 @@ var mainstate = {
 		var level = [
 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
 'x                                              x                                                                     x',
-'x            o                                 x                                                                     x',
-'x            x                                 x                                                                     x',
+'x                                              x                                                                     x',
+'x                                              x                                                           o         x',
 'x            x       o                         x                                                                     x',
 'x       x    x   xxxxxxxxxx                    x                                                                     x',
 'x       x                 xxxxxxx              x                                                                     x',
@@ -48,7 +48,7 @@ var mainstate = {
 'x       x                 x                     x x    !     !   !     !    ! ! !    ! !   ! !   !    ! !    !       x',
 'x                         x                   x        !     !   !  !!!! !!!! ! !!!!!! !    !!   !!!!!! !    !       x',	
 'xxxxx!!!!!!!!!!!!!!!!!!!!!xxx!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!xxxxx!!!!!!!!!!!!!!!!!',
-		];
+];
 		
 
 for (var i = 0; i < level.length; i++) {
