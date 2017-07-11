@@ -1,7 +1,7 @@
 var mainstate = {
 	
 	create: function (){
-		this.game.world.setBounds(0,0,1400,9000);
+		this.game.world.setBounds(0,0,2000,10000);
 		this.cursor = this.game.input.keyboard.createCursorKeys();
 		
 		
@@ -18,35 +18,36 @@ var mainstate = {
 		this.player.body.collideWorldBounds = true;
 		
 		var level = [
-'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-'x                                              x',
-'x                                              x',
-'x                                              x',
-'x                                              x',
-'x                                              x',
-'x                                              x',
-'x                                              x',
-'x                                              x',
-'x                                              x',		
-'x                                              x',
-'x                                              x',
-'x                                              x',
-'x                                              x',
-'x                                              x',
-'x                                              x',
-'x                                              x',
-'x                                              x',
-'x                                              x',		
-'x                                              x',
-'x             x                                x',
-'x                                              x',
-'x           x   x                              x',
-'x                                              x',
-'x         x       x                            x',
-'x                                              x',
-'x       x           x                          x',
-'x                                              x',		
-'xxxxxx!!!!!!!!!!!!!!!!!!xxxxx!!!!!!!!!!!!!xxxxxx',
+'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+'x                                              x                                                                     x',
+'x            o                                 x                                                                     x',
+'x            x                                 x                                                                     x',
+'x            x       o                         x                                                                     x',
+'x       x    x   xxxxxxxxxx                    x                                                                     x',
+'x       x                 xxxxxxx              x                                                                     x',
+'x       x                 xxxxxxxxxx           x                                                                     x',
+'x   o                     xxxxxxxxxxxxx        x                                                                     x',
+'x   x                     xxxxxxxxxx           x                                                                     x', 
+'x   x                     xxxxxxx              x                                                                     x',
+'x      x                  x                                                                                          x',
+'x      x                  x                                                                                          x',
+'x         x               x                                                                                          x',
+'x         x               x                                                                                          x',
+'x            x            x                                                                                          x',
+'x            x            x                    x                                                                     x',
+'x               x         x                    x                                                                     x',
+'x               x         x                    x                                                                     x',	
+'x               x         x               o    x                                                                     x',
+'x                         x               x    x                                                                     x',
+'x             x           x                    x                                                                     x',
+'x                         x                    x       o         o                     o                o            x',
+'x           x             x                    x       x     x   x  x!!! x!!! x !!!x!! x     x   x!!!   x !!!x!!!    x',
+'x                         x                            !!   !!   !  !    !    ! !    ! !     !   !   !  !    !       !',
+'x         x               x                    x       ! ! ! !   !  !    !    ! !    ! ! !   !   !   !  !    !       x',
+'x                         x                         x  !  !  !   !  !!!! !!!! ! !    ! !  !  !   !!!!!! !    !       x',
+'x       x                 x                     x x    !     !   !     !    ! ! !    ! !   ! !   !    ! !    !       x',
+'x                         x                   x        !     !   !  !!!! !!!! ! !!!!!! !    !!   !!!!!! !    !       x',	
+'xxxxx!!!!!!!!!!!!!!!!!!!!!xxx!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!xxxxx!!!!!!!!!!!!!!!!!',
 		];
 		
 
@@ -86,7 +87,7 @@ this.lavas.add(enemy);
 		this.player.body.velocity.x =0;
 	}
 	if(this.cursor.up.isDown && this.player.body.touching.down){
-	   this.player.body.velocity.y = -400;
+	   this.player.body.velocity.y = -600;
 	}
 	},
 takeCoin: function(player, coin){
