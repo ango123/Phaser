@@ -1,7 +1,7 @@
 var mainstate = {
 	
 	create: function (){
-		this.game.world.setBounds(0,0,2000,10000);
+		this.game.world.setBounds(0,0,2500,10000);
 		this.cursor = this.game.input.keyboard.createCursorKeys();
 		
 		
