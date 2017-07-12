@@ -6,11 +6,12 @@ var preload = {
 		
 		this.game.load.image("player",'player.png');
 		this.game.load.image("wall",'wall.png');
-		this.game.load.image("coin",'coin.png');
+		this.game.load.image("coin",'key.png');
 		this.game.load.image("lava",'lava.png');
-		this.game.load.image("gameTitle","gametitle.png");
-		this.game.load.image("play","play.png");
-		this.game.load.image("gameOver", "gameover.png")
+		this.game.load.image("gameTitle","Blockey Title.png");
+		this.game.load.image("play","playbutton.png");
+		this.game.load.image("enemy","blueEnemy.png");
+		this.game.load.image("gameOver", "GameOver.png")
 	},
 	create: function(){
 		this.game.state.start("GameTitle");

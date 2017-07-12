@@ -1,7 +1,7 @@
 var mainstate = {
 	
 	create: function (){
-		this.game.world.setBounds(0,0,2000,10000);
+		this.game.world.setBounds(0,0,2500,10000);
 		this.cursor = this.game.input.keyboard.createCursorKeys();
 		
 		
@@ -20,8 +20,13 @@ var mainstate = {
 		var level = [
 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
 'x                                              x                                                                     x',
+<<<<<<< HEAD
 'x            o                                 x                                                                     x',
 'x                                              x                                                                     x',
+=======
+'x                                              x                                                                     x',
+'x                                              x                                                           o         x',
+>>>>>>> 7c0829c8b32cbbfb4330ba94bf855b9d6578d582
 'x            x       o                         x                                                                     x',
 'x            x   xxxxxxxxxxxxxxxxxxxxxxxxxxx   x                                                                     x',
 'x       x                 x                    x                                                                     x',
@@ -42,6 +47,7 @@ var mainstate = {
 'x             x           x                    x                                                                     x',
 'x                         x                    x       o         o                     o                o            x',
 'x           x             x                    x       x     x   x  x!!! x!!! x !!!x!! x     x   x!!!   x !!!x!!!    x',
+<<<<<<< HEAD
 'x                         x                    x       !!   !!   !  !    !    ! !    ! !     !   !   !  !    !       !',
 'x         x               xxxxxxxxxxxxxxxxxx   x       ! ! ! !   !  !    !    ! !    ! ! !   !   !   !  !    !       x',
 'x                         x                            !  !  !   !  !!!! !!!! ! !    ! !  !  !   !!!!!! !    !       x',
@@ -49,6 +55,15 @@ var mainstate = {
 'x                         x                            !     !   !  !!!! !!!! ! !!!!!! !    !!   !!!!!! !    !       x',	
 'xxxxx!!!!!!!!!!!!!!!!!!!!!xxxxxxxxxxxxxxxxxxxxxx!!!xxxx!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!xxxxx!!!!!!!!!!!!!!!!!',
 		];
+=======
+'x                         x                            !!   !!   !  !    !    ! !    ! !     !   !   !  !    !       !',
+'x         x               x                    x       ! ! ! !   !  !    !    ! !    ! ! !   !   !   !  !    !       x',
+'x                         x                         x  !  !  !   !  !!!! !!!! ! !    ! !  !  !   !!!!!! !    !       x',
+'x       x                 x                     x x    !     !   !     !    ! ! !    ! !   ! !   !    ! !    !       x',
+'x                         x                   x        !     !   !  !!!! !!!! ! !!!!!! !    !!   !!!!!! !    !       x',	
+'xxxxx!!!!!!!!!!!!!!!!!!!!!xxx!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!xxxxx!!!!!!!!!!!!!!!!!',
+];
+>>>>>>> 7c0829c8b32cbbfb4330ba94bf855b9d6578d582
 		
 
 for (var i = 0; i < level.length; i++) {
