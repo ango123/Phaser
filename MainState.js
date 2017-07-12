@@ -20,13 +20,10 @@ var mainstate = {
 		var level = [
 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
 'x                                              x                                                                     x',
-<<<<<<< HEAD
 'x            o                                 x                                                                     x',
 'x                                              x                                                                     x',
-=======
 'x                                              x                                                                     x',
 'x                                              x                                                           o         x',
->>>>>>> 7c0829c8b32cbbfb4330ba94bf855b9d6578d582
 'x            x       o                         x                                                                     x',
 'x            x   xxxxxxxxxxxxxxxxxxxxxxxxxxx   x                                                                     x',
 'x       x                 x                    x                                                                     x',
@@ -47,23 +44,13 @@ var mainstate = {
 'x             x           x                    x                                                                     x',
 'x                         x                    x       o         o                     o                o            x',
 'x           x             x                    x       x     x   x  x!!! x!!! x !!!x!! x     x   x!!!   x !!!x!!!    x',
-<<<<<<< HEAD
 'x                         x                    x       !!   !!   !  !    !    ! !    ! !     !   !   !  !    !       !',
 'x         x               xxxxxxxxxxxxxxxxxx   x       ! ! ! !   !  !    !    ! !    ! ! !   !   !   !  !    !       x',
 'x                         x                            !  !  !   !  !!!! !!!! ! !    ! !  !  !   !!!!!! !    !       x',
 'x       x                 x                            !     !   !     !    ! ! !    ! !   ! !   !    ! !    !       x',
 'x                         x                            !     !   !  !!!! !!!! ! !!!!!! !    !!   !!!!!! !    !       x',	
 'xxxxx!!!!!!!!!!!!!!!!!!!!!xxxxxxxxxxxxxxxxxxxxxx!!!xxxx!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!xxxxx!!!!!!!!!!!!!!!!!',
-		];
-=======
-'x                         x                            !!   !!   !  !    !    ! !    ! !     !   !   !  !    !       !',
-'x         x               x                    x       ! ! ! !   !  !    !    ! !    ! ! !   !   !   !  !    !       x',
-'x                         x                         x  !  !  !   !  !!!! !!!! ! !    ! !  !  !   !!!!!! !    !       x',
-'x       x                 x                     x x    !     !   !     !    ! ! !    ! !   ! !   !    ! !    !       x',
-'x                         x                   x        !     !   !  !!!! !!!! ! !!!!!! !    !!   !!!!!! !    !       x',	
-'xxxxx!!!!!!!!!!!!!!!!!!!!!xxx!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!xxxxx!!!!!!!!!!!!!!!!!',
 ];
->>>>>>> 7c0829c8b32cbbfb4330ba94bf855b9d6578d582
 		
 
 for (var i = 0; i < level.length; i++) {
