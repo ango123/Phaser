@@ -44,12 +44,12 @@ var mainstate = {
 'x             x           x                    x                                                                     x',
 'x                         x                    x       o         o                     o                o            x',
 'x           x             x                    x       x     x   x  x!!! x!!! x !!!x!! x     x   x!!!   x !!!x!!!    x',
-'x                         x                    x       !!   !!   !  !    !    ! !    ! !     !   !   !  !    !       !',
-'x         x               xxxxxxxxxxxxxxxxxx   x       ! ! ! !   !  !    !    ! !    ! ! !   !   !   !  !    !       x',
+'x                         x                    x       !!   !!   !  !    !    ! !    ! !     !   !   !  !    !       x',
+'x         x               xxxxxxxxxxxxxxxxxx   xxxxx   ! ! ! !   !  !    !    ! !    ! ! !   !   !   !  !    !       x',
 'x                         x                            !  !  !   !  !!!! !!!! ! !    ! !  !  !   !!!!!! !    !       x',
 'x       x                 x                            !     !   !     !    ! ! !    ! !   ! !   !    ! !    !       x',
 'x                         x                            !     !   !  !!!! !!!! ! !!!!!! !    !!   !!!!!! !    !       x',	
-'xxxxx!!!!!!!!!!!!!!!!!!!!!xxxxxxxxxxxxxxxxxxxxxx!!!xxxx!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!xxxxx!!!!!!!!!!!!!!!!!',
+'xxxxx!!!!!!!!!!!!!!!!!!!!!xxxxxxxxxxxxxxxxxxxxxx!!!!xx!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
 ];
 		
 
