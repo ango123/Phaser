@@ -71,6 +71,8 @@ else if (level[i][j] == '!') {
 var enemy = this.game.add.sprite(30+20*j, 30+20*i, 'lava');
 this.lavas.add(enemy);
 }
+
+
 }
 }
 	},
