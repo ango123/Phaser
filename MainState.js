@@ -21,33 +21,33 @@ var mainstate = {
 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
 'x                                              x                                                                     x',
 'x            o                                 x                                                                     x',
-'x            x                                 x                                                                     x',
+'x                                              x                                                                     x',
 'x            x       o                         x                                                                     x',
-'x       x    x   xxxxxxxxxx                    x                                                                     x',
-'x       x                 xxxxxxx              x                                                                     x',
-'x       x                 xxxxxxxxxx           x                                                                     x',
-'x   o                     xxxxxxxxxxxxx        x                                                                     x',
-'x   x                     xxxxxxxxxx           x                                                                     x', 
-'x   x                     xxxxxxx              x                                                                     x',
-'x      x                  x                                                                                          x',
-'x      x                  x                                                                                          x',
-'x         x               x                                                                                          x',
-'x         x               x                                                                                          x',
-'x            x            x                                                                                          x',
+'x            x   xxxxxxxxxxxxxxxxxxxxxxxxxxx   x                                                                     x',
+'x       x                 x                    x                                                                     x',
+'x       x                 x                    x                                                                     x',
+'x   o                     x                    x                                                                     x',
+'x   x                     x                    x                                                                     x', 
+'x   x                     x   xxxxxxxxxxxxxxxxxx                                                                     x',
+'x      x                  x                    x                                                                     x',
+'x      x                  x                    x                                                                     x',
+'x         x               x                    x                                                                     x',
+'x         x               x                    x                                                                     x',
+'x            x            xxxxxxxxxxxxxxxxxx   x                                                                     x',
 'x            x            x                    x                                                                     x',
 'x               x         x                    x                                                                     x',
 'x               x         x                    x                                                                     x',	
-'x               x         x               o    x                                                                     x',
-'x                         x               x    x                                                                     x',
+'x               x         x                    x                                                                     x',
+'x                         x   xxxxxxxxxxxxxxxxxx                                                                     x',
 'x             x           x                    x                                                                     x',
 'x                         x                    x       o         o                     o                o            x',
 'x           x             x                    x       x     x   x  x!!! x!!! x !!!x!! x     x   x!!!   x !!!x!!!    x',
-'x                         x                            !!   !!   !  !    !    ! !    ! !     !   !   !  !    !       !',
-'x         x               x                    x       ! ! ! !   !  !    !    ! !    ! ! !   !   !   !  !    !       x',
-'x                         x                         x  !  !  !   !  !!!! !!!! ! !    ! !  !  !   !!!!!! !    !       x',
-'x       x                 x                     x x    !     !   !     !    ! ! !    ! !   ! !   !    ! !    !       x',
-'x                         x                   x        !     !   !  !!!! !!!! ! !!!!!! !    !!   !!!!!! !    !       x',	
-'xxxxx!!!!!!!!!!!!!!!!!!!!!xxx!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!xxxxx!!!!!!!!!!!!!!!!!',
+'x                         x                    x       !!   !!   !  !    !    ! !    ! !     !   !   !  !    !       !',
+'x         x               xxxxxxxxxxxxxxxxxx   x       ! ! ! !   !  !    !    ! !    ! ! !   !   !   !  !    !       x',
+'x                         x                            !  !  !   !  !!!! !!!! ! !    ! !  !  !   !!!!!! !    !       x',
+'x       x                 x                            !     !   !     !    ! ! !    ! !   ! !   !    ! !    !       x',
+'x                         x                            !     !   !  !!!! !!!! ! !!!!!! !    !!   !!!!!! !    !       x',	
+'xxxxx!!!!!!!!!!!!!!!!!!!!!xxxxxxxxxxxxxxxxxxxxxx!!!xxxx!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!xxxxx!!!!!!!!!!!!!!!!!',
 		];
 		
 
@@ -93,6 +93,8 @@ this.lavas.add(enemy);
 takeCoin: function(player, coin){
 	coin.kill();
 },
+    
+    
 restart: function (){
 	this.game.state.start("GameOver");
 }	
