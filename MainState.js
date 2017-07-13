@@ -8,7 +8,7 @@ var mainState = {
 		this.game.stage.backgroundColor = '#C0C0C0';
 		this.game.physics.startSystem(Phaser.Physics.ARCADE);
 		this.game.world.enableBody= true;
-		this.player = this.game.add.sprite(70,100,"player");
+		this.player = this.game.add.sprite(650,100,"player");
 		this.player.body.gravity.y = 1600;
 
 		this.p1_health = this.game.add.group();
@@ -23,30 +23,30 @@ var mainState = {
 
 
 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+'x                                 x    x                                   x',
+'x                                 x    x                                   x',
+'x                                 x    x                                   x',
+'x                                 x    x                                   x',
+'x                                 x    x                                   x',
+'x                                 x    x                                   x',
+'xxxx     xxxxxxxxxxxxxxxxxxxxxxxxxx    xxxxxxxxxxxxxxxxxxxxxxxxxxxxx     x x',
+'x        !                                                         x       x',
+'x        !  x     x x x!!! x!!! x !xxxx! x     x x!!!   x !!!x!!!  x x     x',
+'x     xxx!  !!   !! ! !    !    ! !    ! !!    ! !   !  !    !     x     x x',
+'x        !  ! ! ! ! ! !    !    ! !    ! ! !   ! !   !  !    !     xx      x',
+'x        !  !  !  ! ! !!!! !!!! ! !    ! !  !  ! !!!!!! !    !     x     x x',
+'xxxx     !  !     ! !    !    ! ! !    ! !   ! ! !    ! !    !     xx      x',
+'x        !  !     ! ! !!!! !!!! ! !!!!!! !    !! !!!!!! !    !     x      xx',
+'x        !                                                         x       x',     
+'x        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    x  x',
 'x                                                                          x',
+'x                                                                     x    x',
+'x                x                                 x          x   x        x',
+'x                                           x  x      x    x               x',
+'x         x   x      x                x                                    x',
+'x      x                  x    xx                                          x',
 'x                                                                          x',
-'x                                                                          x',
-'x                                                                          x',
-'x                                                                          x',
-'x                                                                          x',
-'x        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx       x',
-'x        x                                                         x       x',
-'x        x  x     x x x!!! x!!! x !!!x!! x     x x!!!   x !!!x!!!  x       x',
-'x        x  !!   !! ! !    !    ! !    ! !!    ! !   !  !    !     x       x',
-'x        x  ! ! ! ! ! !    !    ! !    ! ! !   ! !   !  !    !     x       x',
-'x        x  !  !  ! ! !!!! !!!! ! !    ! !  !  ! !!!!!! !    !     x       x',
-'x        x  !     ! !    !    ! ! !    ! !   ! ! !    ! !    !     x       x',
-'x        x  !     ! ! !!!! !!!! ! !!!!!! !    !! !!!!!! !    !     x       x',
-'x        x                                                         x       x',     
-'x        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx       x',
-'x                                                                          x',
-'x                                                                          x',
-'x                                                                          x',
-'x                                                                          x',
-'x                                                                          x',
-'x                                                                          x',
-'x                                                                          x',
-'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+'x!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!x',
 
 ];
 		
