@@ -1,4 +1,4 @@
-var mainstate = {
+var mainState = {
 	
 	create: function (){
 		this.game.world.setBounds(0,0,2500,10000);
@@ -11,45 +11,46 @@ var mainstate = {
 		this.player = this.game.add.sprite(70,100,"player");
 		this.player.body.gravity.y = 1600;
 		
-		this.walls=this.game.add.group();
-		this.lavas=this.game.add.group();
-		this.coins=this.game.add.group();
+		this.walls = this.game.add.group();
+		this.lavas = this.game.add.group();
+		this.coins = this.game.add.group();
 		this.game.camera.follow(this.player);
 		this.player.body.collideWorldBounds = true;
 		
 		var level = [
-'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-'x                                              x                                                                     x',
-'x            o                                 x                                                                     x',
-'x                                              x                                                                     x',
-'x                                              x                                                                     x',
-'x                                              x                                                           o         x',
-'x            x       o                         x                                                                     x',
-'x            x   xxxxxxxxxxxxxxxxxxxxxxxxxxx   x                                                                     x',
-'x       x                 x                    x                                                                     x',
-'x       x                 x                    x                                                                     x',
-'x   o                     x                    x                                                                     x',
-'x   x                     x                    x                                                                     x', 
-'x   x                     x   xxxxxxxxxxxxxxxxxx                                                                     x',
-'x      x                  x                    x                                                                     x',
-'x      x                  x                    x                                                                     x',
-'x         x               x                    x                                                                     x',
-'x         x               x                    x                                                                     x',
-'x            x            xxxxxxxxxxxxxxxxxx   x                                                                     x',
-'x            x            x                    x                                                                     x',
-'x               x         x                    x                                                                     x',
-'x               x         x                    x                                                                     x',	
-'x               x         x                    x                                                                     x',
-'x                         x   xxxxxxxxxxxxxxxxxx                                                                     x',
-'x             x           x                    x                                                                     x',
-'x                         x                    x       o         o                     o                o            x',
-'x           x             x                    x       x     x   x  x!!! x!!! x !!!x!! x     x   x!!!   x !!!x!!!    x',
-'x                         x                    x       !!   !!   !  !    !    ! !    ! !     !   !   !  !    !       x',
-'x         x               xxxxxxxxxxxxxxxxxx   xxxxx   ! ! ! !   !  !    !    ! !    ! ! !   !   !   !  !    !       x',
-'x                         x                            !  !  !   !  !!!! !!!! ! !    ! !  !  !   !!!!!! !    !       x',
-'x       x                 x                            !     !   !     !    ! ! !    ! !   ! !   !    ! !    !       x',
-'x                         x                            !     !   !  !!!! !!!! ! !!!!!! !    !!   !!!!!! !    !       x',	
-'xxxxx!!!!!!!!!!!!!!!!!!!!!xxxxxxxxxxxxxxxxxxxxxx!!!!xx!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
+
+'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+'x                                                                           x',
+'x                                                                           x',
+'x                                                                           x',
+'x                                                                           x',
+'x                                                                           x',
+'x                                                                           x',
+'x         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx       x',
+'x         x                                                         x       x',
+'x         x  x     x x x!!! x!!! x !!!x!! x     x x!!!   x !!!x!!!  x       x',
+'x         x  !!   !! ! !    !    ! !    ! !!    ! !   !  !    !     x       x',
+'x         x  ! ! ! ! ! !    !    ! !    ! ! !   ! !   !  !    !     x       x',
+'x         x  !  !  ! ! !!!! !!!! ! !    ! !  !  ! !!!!!! !    !     x       x',
+'x         x  !     ! !    !    ! ! !    ! !   ! ! !    ! !    !     x       x',
+'x         x  !     ! ! !!!! !!!! ! !!!!!! !    !! !!!!!! !    !     x       x',
+'x         x                                                         x       x',     
+'x         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx       x',
+'x                                                                           x',
+'x                                                                           x',
+'x                                                                           x',
+'x                                                                           x',
+'x                                                                           x',
+'x                                                                           x',
+'x                                                                           x',
+'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+            
+            
+            
+            
+            
+            
+            
 ];
 		
 
@@ -101,3 +102,4 @@ restart: function (){
 	this.game.state.start("GameOver");
 }	
 };
+
