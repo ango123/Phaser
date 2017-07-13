@@ -4,20 +4,28 @@ var mainState = {
 		this.game.world.setBounds(0,0,2500,10000);
 		this.cursor = this.game.input.keyboard.createCursorKeys();
 		
-		
+		this.score=0;
 		this.game.stage.backgroundColor = '#C0C0C0';
 		this.game.physics.startSystem(Phaser.Physics.ARCADE);
 		this.game.world.enableBody= true;
 		this.player = this.game.add.sprite(70,100,"player");
 		this.player.body.gravity.y = 1600;
+<<<<<<< HEAD
 		
 		this.walls = this.game.add.group();
 		this.lavas = this.game.add.group();
 		this.coins = this.game.add.group();
+=======
+		this.p1_health = this.game.add.group();
+		this.walls=this.game.add.group();
+		this.lavas=this.game.add.group();
+		this.coins=this.game.add.group();
+>>>>>>> f7f0024897be9b9285022c64b0daf48560f2e030
 		this.game.camera.follow(this.player);
 		this.player.body.collideWorldBounds = true;
 		
 		var level = [
+<<<<<<< HEAD
 
 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
 'x                                                                          x',
@@ -51,6 +59,40 @@ var mainState = {
             
             
             
+=======
+'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+'x                                              x                                                                     x',
+'x            o                                 x                                                                     x',
+'x                                              x                                                                     x',
+'x                                              x                                                                     x',
+'x                                              x                                                           o         x',
+'x            x       o                         x                                                                     x',
+'x            x   xxxxxxxxxxxxxxxxxxxxxxxxxxx   x                                                                     x',
+'x       x                 x                    x                                                                     x',
+'x       x                 x                    x                                                                     x',
+'x   o                     x                    x                                                                     x',
+'x   x                     x                    x                                                                     x', 
+'x   x                     x   xxxxxxxxxxxxxxxxxx                                                                     x',
+'x      x                  x                    x                                                                     x',
+'x      x                  x                    x                                                                     x',
+'x         x               x                    x                                                                     x',
+'x         x               x                    x                                                                     x',
+'x            x            xxxxxxxxxxxxxxxxxx   x                                                                     x',
+'x            x            x                    x                                                                     x',
+'x               x         x                    x                                                                     x',
+'x               x         x                    x                                                                     x',	
+'x               x         x                    x                                                                     x',
+'x                         x   xxxxxxxxxxxxxxxxxx                                                                     x',
+'x             x           x                    x                                                                     x',
+'x                         x                    x       o         o                     o                o            x',
+'x           x             x                    x       x     x   x  x!!! x!!! x !!!x!! x     x   x!!!   x !!!x!!!    x',
+'x                         x                    x       !!   !!   !  !    !    ! !    ! !     !   !   !  !    !       x',
+'x         x               xxxxxxxxxxxxxxxxxx           ! ! ! !   !  !    !    ! !    ! ! !   !   !   !  !    !       x',
+'x                         x                            !  !  !   !  !!!! !!!! ! !    ! !  !  !   !!!!!! !    !       x',
+'x       x                 x                          x !     !   !     !    ! ! !    ! !   ! !   !    ! !    !       x',
+'x                         x                            !     !   !  !!!! !!!! ! !!!!!! !    !!   !!!!!! !    !       x',	
+'xxxxx!!!!!!!!!!!!!!!!!!!!!xxxxxxxxxxxxxxxxxxxxxx!!!!xx!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
+>>>>>>> f7f0024897be9b9285022c64b0daf48560f2e030
 ];
 		
 
@@ -72,29 +114,49 @@ else if (level[i][j] == '!') {
 var enemy = this.game.add.sprite(30+20*j, 30+20*i, 'lava');
 this.lavas.add(enemy);
 }
+
+
 }
 }
 	},
 	update: function(){
-	this.physics.arcade.collide(this.walls,this.player);
-	this.physics.arcade.collide(this.coins,this.player,this.takeCoin, null, this);
-	this.physics.arcade.overlap(this.lavas,this.player,this.restart, null,this);
-	
-	if(this.cursor.left.isDown){
-	   this.player.body.velocity.x = -200; 
-	}
-	else if(this.cursor.right.isDown){
-		this.player.body.velocity.x = 200;
-	}
-	else{
-		this.player.body.velocity.x =0;
-	}
-	if(this.cursor.up.isDown && this.player.body.touching.down){
-	   this.player.body.velocity.y = -600;
-	}
+		this.physics.arcade.collide(this.walls,this.player);
+		this.physics.arcade.collide(this.coins,this.player,this.takeCoin, null, this);
+		this.physics.arcade.overlap(this.lavas,this.player,this.restart, null,this);
+		this.updateKeys();
+		if(this.cursor.left.isDown){
+		   this.player.body.velocity.x = -200; 
+		}
+		else if(this.cursor.right.isDown){
+			this.player.body.velocity.x = 200;
+		}
+		else{
+			this.player.body.velocity.x =0;
+		}
+		if(this.cursor.up.isDown && this.player.body.touching.down){
+		   this.player.body.velocity.y = -600;
+		}
 	},
+	
+updateKeys: function (){
+	this.p1_health.callAll('kill');
+	var j = 0;
+	for(var i = 0; i< this.score; i++){
+		console.log("creating group", i)
+		this.p1_health.create(j, 10, 'coin');
+		this.p1_health.fixedToCamera = true;
+		//this.p1_health.anchor.setTo(0.5,0.5);
+//				this.p1_health.create(0, 0, 'coin');
+
+		j=j +15;
+	}
+//	this.p1_health.scale.set(.3,.3);	
+	
+},
 takeCoin: function(player, coin){
 	coin.kill();
+	this.score++;
+	this.updateKeys();
 },
     
     
