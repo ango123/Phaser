@@ -10,22 +10,22 @@ var mainState = {
 		this.game.world.enableBody= true;
 		this.player = this.game.add.sprite(70,100,"player");
 		this.player.body.gravity.y = 1600;
-<<<<<<< HEAD
 		
 		this.walls = this.game.add.group();
 		this.lavas = this.game.add.group();
 		this.coins = this.game.add.group();
-=======
 		this.p1_health = this.game.add.group();
 		this.walls=this.game.add.group();
 		this.lavas=this.game.add.group();
 		this.coins=this.game.add.group();
->>>>>>> f7f0024897be9b9285022c64b0daf48560f2e030
+
 		this.game.camera.follow(this.player);
 		this.player.body.collideWorldBounds = true;
-		
+		this.enemy = this.game.add.group();
+		this.enemy.enableBody=true;
+		this.enemy.physicsBodyType = (Phaser.Physics.ARCADE);
 		var level = [
-<<<<<<< HEAD
+
 
 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
 'x                                                                          x',
@@ -50,49 +50,9 @@ var mainState = {
 'x                                                                          x',
 'x                                                                          x',
 'x                                                                          x',
-'x                                                                          x',
+'x                 b                                                        x',
 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-            
-            
-            
-            
-            
-            
-            
-=======
-'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-'x                                              x                                                                     x',
-'x            o                                 x                                                                     x',
-'x                                              x                                                                     x',
-'x                                              x                                                                     x',
-'x                                              x                                                           o         x',
-'x            x       o                         x                                                                     x',
-'x            x   xxxxxxxxxxxxxxxxxxxxxxxxxxx   x                                                                     x',
-'x       x                 x                    x                                                                     x',
-'x       x                 x                    x                                                                     x',
-'x   o                     x                    x                                                                     x',
-'x   x                     x                    x                                                                     x', 
-'x   x                     x   xxxxxxxxxxxxxxxxxx                                                                     x',
-'x      x                  x                    x                                                                     x',
-'x      x                  x                    x                                                                     x',
-'x         x               x                    x                                                                     x',
-'x         x               x                    x                                                                     x',
-'x            x            xxxxxxxxxxxxxxxxxx   x                                                                     x',
-'x            x            x                    x                                                                     x',
-'x               x         x                    x                                                                     x',
-'x               x         x                    x                                                                     x',	
-'x               x         x                    x                                                                     x',
-'x                         x   xxxxxxxxxxxxxxxxxx                                                                     x',
-'x             x           x                    x                                                                     x',
-'x                         x                    x       o         o                     o                o            x',
-'x           x             x                    x       x     x   x  x!!! x!!! x !!!x!! x     x   x!!!   x !!!x!!!    x',
-'x                         x                    x       !!   !!   !  !    !    ! !    ! !     !   !   !  !    !       x',
-'x         x               xxxxxxxxxxxxxxxxxx           ! ! ! !   !  !    !    ! !    ! ! !   !   !   !  !    !       x',
-'x                         x                            !  !  !   !  !!!! !!!! ! !    ! !  !  !   !!!!!! !    !       x',
-'x       x                 x                          x !     !   !     !    ! ! !    ! !   ! !   !    ! !    !       x',
-'x                         x                            !     !   !  !!!! !!!! ! !!!!!! !    !!   !!!!!! !    !       x',	
-'xxxxx!!!!!!!!!!!!!!!!!!!!!xxxxxxxxxxxxxxxxxxxxxx!!!!xx!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
->>>>>>> f7f0024897be9b9285022c64b0daf48560f2e030
+
 ];
 		
 
@@ -114,15 +74,38 @@ else if (level[i][j] == '!') {
 var enemy = this.game.add.sprite(30+20*j, 30+20*i, 'lava');
 this.lavas.add(enemy);
 }
-
-
+else if (level[i][j] == 'b') {
+var monster = this.game.add.sprite(30+20*j, 30+20*i, 'enemy');
+this.enemy.add(monster);
+var tween = this.game.add.tween(this.enemy).to( { x: 200 }, 2000, Phaser.Easing.Linear.None, true, 0, 1000, true);
+}
 }
 }
 	},
+////createenemies: function () {
+//
+//    for (var y = 0; y < 4; y++)
+//    {
+//        for (var x = 0; x < 10; x++)
+//        {
+//            var enemy = enemies.create(x * 48, y * 50, 'enemy');
+//            enemy.anchor.setTo(0.5, 0.5);
+//		}
+//    }
+//
+//    enemy.x = 100;
+//    enemy.y = 50;
+//
+//   
+//
+//    //  When the tween loops it calls descend
+//    tween.onLoop.add(descend, this);
+//},
 	update: function(){
 		this.physics.arcade.collide(this.walls,this.player);
 		this.physics.arcade.collide(this.coins,this.player,this.takeCoin, null, this);
 		this.physics.arcade.overlap(this.lavas,this.player,this.restart, null,this);
+		this.physics.arcade.overlap(this.enemy,this.player,this.restart, null,this);
 		this.updateKeys();
 		if(this.cursor.left.isDown){
 		   this.player.body.velocity.x = -200; 
