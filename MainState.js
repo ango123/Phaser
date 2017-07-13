@@ -28,7 +28,7 @@ var mainState = {
 'x                                 x    x                                   x',
 'x                                 x    x                                   x',
 'x                                 x    x                                   x',
-'x                                 x    x                                   x',
+'x            b                    x    x                                   x',
 'xxxx     xxxxxxxxxxxxxxxxxxxxxxxxxx    xxxxxxxxxxxxxxxxxxxxxxxxxxxxx     x x',
 'x        !                                                         x       x',
 'x        !  x     x x x!!! x!!! x !xxxx! x     x x!!!   x !!!x!!!  x x     x',
