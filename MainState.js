@@ -10,22 +10,17 @@ var mainState = {
 		this.game.world.enableBody= true;
 		this.player = this.game.add.sprite(70,100,"player");
 		this.player.body.gravity.y = 1600;
-<<<<<<< HEAD
-		
-		this.walls = this.game.add.group();
-		this.lavas = this.game.add.group();
-		this.coins = this.game.add.group();
-=======
+
 		this.p1_health = this.game.add.group();
 		this.walls=this.game.add.group();
 		this.lavas=this.game.add.group();
 		this.coins=this.game.add.group();
->>>>>>> f7f0024897be9b9285022c64b0daf48560f2e030
+
 		this.game.camera.follow(this.player);
 		this.player.body.collideWorldBounds = true;
 		
 		var level = [
-<<<<<<< HEAD
+
 
 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
 'x                                                                          x',
@@ -52,47 +47,7 @@ var mainState = {
 'x                                                                          x',
 'x                                                                          x',
 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-            
-            
-            
-            
-            
-            
-            
-=======
-'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-'x                                              x                                                                     x',
-'x            o                                 x                                                                     x',
-'x                                              x                                                                     x',
-'x                                              x                                                                     x',
-'x                                              x                                                           o         x',
-'x            x       o                         x                                                                     x',
-'x            x   xxxxxxxxxxxxxxxxxxxxxxxxxxx   x                                                                     x',
-'x       x                 x                    x                                                                     x',
-'x       x                 x                    x                                                                     x',
-'x   o                     x                    x                                                                     x',
-'x   x                     x                    x                                                                     x', 
-'x   x                     x   xxxxxxxxxxxxxxxxxx                                                                     x',
-'x      x                  x                    x                                                                     x',
-'x      x                  x                    x                                                                     x',
-'x         x               x                    x                                                                     x',
-'x         x               x                    x                                                                     x',
-'x            x            xxxxxxxxxxxxxxxxxx   x                                                                     x',
-'x            x            x                    x                                                                     x',
-'x               x         x                    x                                                                     x',
-'x               x         x                    x                                                                     x',	
-'x               x         x                    x                                                                     x',
-'x                         x   xxxxxxxxxxxxxxxxxx                                                                     x',
-'x             x           x                    x                                                                     x',
-'x                         x                    x       o         o                     o                o            x',
-'x           x             x                    x       x     x   x  x!!! x!!! x !!!x!! x     x   x!!!   x !!!x!!!    x',
-'x                         x                    x       !!   !!   !  !    !    ! !    ! !     !   !   !  !    !       x',
-'x         x               xxxxxxxxxxxxxxxxxx           ! ! ! !   !  !    !    ! !    ! ! !   !   !   !  !    !       x',
-'x                         x                            !  !  !   !  !!!! !!!! ! !    ! !  !  !   !!!!!! !    !       x',
-'x       x                 x                          x !     !   !     !    ! ! !    ! !   ! !   !    ! !    !       x',
-'x                         x                            !     !   !  !!!! !!!! ! !!!!!! !    !!   !!!!!! !    !       x',	
-'xxxxx!!!!!!!!!!!!!!!!!!!!!xxxxxxxxxxxxxxxxxxxxxx!!!!xx!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
->>>>>>> f7f0024897be9b9285022c64b0daf48560f2e030
+
 ];
 		
 
