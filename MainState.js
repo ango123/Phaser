@@ -100,11 +100,12 @@ updateKeys: function (){
 	var j = 0;
 	for(var i = 0; i< this.score; i++){
 		console.log("creating group", i)
-		this.p1_health.create(j+10, 10, 'coin');
+		this.p1_health.create(j, 10, 'coin');
+		this.p1_health.fixedToCamera = true;
 		//this.p1_health.anchor.setTo(0.5,0.5);
 //				this.p1_health.create(0, 0, 'coin');
 
-		j=j +150;
+		j=j +15;
 	}
 //	this.p1_health.scale.set(.3,.3);	
 	
