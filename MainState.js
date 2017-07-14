@@ -1,5 +1,7 @@
 var mainState = {
-	
+	preload: function() {
+		this.game.load.spritesheet("playerSheet", "Sprite.png", 1841/4, 2400/4)
+	},
 	create: function (){
 		this.game.world.setBounds(0,0,2500,10000);
 		this.cursor = this.game.input.keyboard.createCursorKeys();
@@ -8,8 +10,14 @@ var mainState = {
 		this.game.stage.backgroundColor = '#C0C0C0';
 		this.game.physics.startSystem(Phaser.Physics.ARCADE);
 		this.game.world.enableBody= true;
-		this.player = this.game.add.sprite(650,100,"player");
+
+		this.player = this.game.add.sprite(650,100,"playerSheet", 1);
+		this.player.animations.add("walk_right", [4, 5, 6, 7])
+		this.player.animations.add("walk_left", [8, 9, 10, 11])
+		this.player.animations.add("stand", [1])
+
 		this.player.body.gravity.y = 1600;
+		this.player.scale.setTo(0.05)
 
 		
 		this.walls = this.game.add.group();
@@ -110,7 +118,8 @@ var tween = this.game.add.tween(this.enemy).to( { x: 200 }, 2000, Phaser.Easing.
 		this.physics.arcade.overlap(this.enemy,this.player,this.restart, null,this);
 		this.updateKeys();
 		if(this.cursor.left.isDown){
-		   this.player.body.velocity.x = -200; 
+		   this.player.body.velocity.x = -200;
+		   this.player. 
 		}
 		else if(this.cursor.right.isDown){
 			this.player.body.velocity.x = 200;
@@ -149,4 +158,3 @@ restart: function (){
 	this.game.state.start("GameOver");
 }	
 };
-
