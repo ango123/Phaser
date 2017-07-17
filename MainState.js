@@ -87,7 +87,7 @@ var mainState = {
 			}
 
 			else if (level[i][j] == 'b') {
-				var monster = this.game.add.sprite(30+20*j, 5+20*i, 'enemySheet');
+				let monster = this.game.add.sprite(30+20*j, 5+20*i, 'enemySheet');
 				var enemy = this.enemy.add(monster);
 				var tween = this.game.add.tween(this.enemy).to( 
 					{ x: 200 }, 
